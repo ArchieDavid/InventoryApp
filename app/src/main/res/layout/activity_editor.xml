@@ -78,8 +78,7 @@
 
     </LinearLayout>
 
-
-    Quantity category
+  <!--  Quantity category-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -113,10 +112,6 @@
             android:layout_height="wrap_content"
             android:text="Upload Image"/>
 
-    <!--<ImageView-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:id="@+id/imageView"/>-->
     <ImageView
         android:id="@+id/imageview_id"
         android:layout_width="wrap_content"
