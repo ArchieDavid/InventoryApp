@@ -50,6 +50,9 @@
     <!-- Toast message in editor when current product has failed to be updated [CHAR LIMIT=NONE] -->
     <string name="editor_update_product_failed">Error with updating product</string>
 
+    <!-- Toast message in editor when current product does not have required fields[CHAR LIMIT=NONE] -->
+    <string name="editor_cannot_insert_product">Product Not Saved! Please populate required fields: name, price, and quantity.</string>
+
     <!-- Dialog message when user is leaving editor but hasn't saved changes [CHAR LIMIT=NONE] -->
     <string name="unsaved_changes_dialog_msg">Discard your changes and quit editing?</string>
 
