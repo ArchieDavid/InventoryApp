@@ -80,11 +80,7 @@
     <!-- Label for overview category of attributes in the editor [CHAR LIMIT=30] -->
     <string name="category_overview">Product Name</string>
 
-
     <string name="category_quantity">Product Quantity</string>
-
-    <!--&lt;!&ndash; Label for gender information in the editor [CHAR LIMIT=30] &ndash;&gt;-->
-    <!--<string name="category_producttype">Product Type</string>-->
 
     <!-- Label for price information in the editor [CHAR LIMIT=30] -->
     <string name="category_price">Product Price</string>
@@ -95,24 +91,18 @@
     <!-- Text hint for quantity field in the editor [CHAR LIMIT=30] -->
     <string name="hint_product_quantity">Product Quantity</string>
 
-    <!--&lt;!&ndash; Text hint for breed field in the editor [CHAR LIMIT=30] &ndash;&gt;-->
-    <!--<string name="hint_product_breed">Breed</string>-->
-
     <!-- Text hint for name field in the editor [CHAR LIMIT=30] -->
     <string name="hint_product_price">$0.00</string>
 
     <!-- Units for weight of the product (kilograms) [CHAR LIMIT=5] -->
     <string name="unit_product_weight">kg</string>
 
-    <!-- Label for dropdown menu option if the product's gender is unknown [CHAR LIMIT=20] -->
+    <!-- Sell button -->
     <string name="action_sell">Sell</string>
 
-    <!--&lt;!&ndash; Label for dropdown menu option if the product is male [CHAR LIMIT=20] &ndash;&gt;-->
-    <!--<string name="product_mobile">Mobile</string>-->
+    <!-- Order button -->
+    <string name="action_order">Order</string>
 
-    <!--&lt;!&ndash; Label for dropdown menu option if the product is female [CHAR LIMIT=20] &ndash;&gt;-->
-    <!--<string name="product_desktop">Desktop</string>-->
+    <string name="order_summary_email_subject">Order more items</string>
 
-    <!--&lt;!&ndash; Label for the product's breed if the breed is unknown [CHAR LIMIT=20] &ndash;&gt;-->
-    <!--<string name="unknown_producttype">Unknown Product Type</string>-->
 </resources>

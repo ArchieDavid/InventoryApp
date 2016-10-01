@@ -4,6 +4,7 @@ import android.content.ContentResolver;
 import android.content.ContentUris;
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.view.LayoutInflater;
@@ -14,6 +15,8 @@ import android.widget.CursorAdapter;
 import android.widget.TextView;
 
 import com.archiedavid.www.inventoryapp.data.ProductContract;
+
+import static android.R.id.message;
 /**
  * Created by Archie David on 29/09/2016.
  */
@@ -25,7 +28,9 @@ import com.archiedavid.www.inventoryapp.data.ProductContract;
  */
 public class ProductCursorAdapter extends CursorAdapter {
     private ContentResolver mContentResolver;
-    TextView nameTextView;
+    private TextView nameTextView;
+    private Context mContext;
+
 
     /**
      * Constructs a new {@link ProductCursorAdapter}.
@@ -36,6 +41,7 @@ public class ProductCursorAdapter extends CursorAdapter {
     public ProductCursorAdapter(Context context, Cursor c, ContentResolver contentResolver) {
         super(context, c, 0 /* flags */);
         mContentResolver = contentResolver;
+        mContext =context;
     }
 
     /**
@@ -107,6 +113,26 @@ public class ProductCursorAdapter extends CursorAdapter {
                 int rowid = (Integer) nameTextView.getTag();
                 Uri currentItemUri = ContentUris.withAppendedId(ProductContract.ProductEntry.CONTENT_URI, rowid);
                 mContentResolver.update(currentItemUri, values, null, null);
+            }
+        });
+
+
+        Button orderButton = (Button) view.findViewById(R.id.list_item_order_button);
+        orderButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String name = "Inventory App";
+                // Use an intent to launch an email app.
+                // Send the order summary in the email body.
+                Intent intent = new Intent(Intent.ACTION_SENDTO);
+                intent.setData(Uri.parse("mailto:")); // only email apps should handle this
+                intent.putExtra(Intent.EXTRA_SUBJECT,
+                        mContext.getString(R.string.order_summary_email_subject, name));
+                intent.putExtra(Intent.EXTRA_TEXT, message);
+
+                if (intent.resolveActivity(mContext.getPackageManager()) != null) {
+                    mContext.startActivity(intent);
+                }
             }
         });
     }
