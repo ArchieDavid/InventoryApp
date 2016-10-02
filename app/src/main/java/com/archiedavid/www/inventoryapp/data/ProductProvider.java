@@ -14,7 +14,7 @@ import android.util.Log;
  */
 public class ProductProvider extends ContentProvider {
 
-    public static final String LOG_TAG = ProductProvider.class.getSimpleName();
+    private static final String LOG_TAG = ProductProvider.class.getSimpleName();
     private static final int PRODUCTS = 100;
     private static final int PRODUCT_ID = 101;
 

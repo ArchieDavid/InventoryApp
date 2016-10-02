@@ -417,7 +417,7 @@ public class EditorActivity extends AppCompatActivity implements
 
 
     // convert from bitmap to byte array
-    public static byte[] getBytes(Bitmap bitmap) {
+    private static byte[] getBytes(Bitmap bitmap) {
         ByteArrayOutputStream stream = new ByteArrayOutputStream();
         bitmap.compress(Bitmap.CompressFormat.PNG, 0, stream);
         return stream.toByteArray();
